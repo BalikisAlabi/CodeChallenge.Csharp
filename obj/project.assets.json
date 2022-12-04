@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\IBCIRCUIT\\Desktop\\AllFiles\\method\\method.csproj",
+      "projectUniqueName": "C:\\Users\\IBCIRCUIT\\Desktop\\method\\method.csproj",
       "projectName": "method",
-      "projectPath": "C:\\Users\\IBCIRCUIT\\Desktop\\AllFiles\\method\\method.csproj",
+      "projectPath": "C:\\Users\\IBCIRCUIT\\Desktop\\method\\method.csproj",
       "packagesPath": "C:\\Users\\IBCIRCUIT\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\IBCIRCUIT\\Desktop\\AllFiles\\method\\obj\\",
+      "outputPath": "C:\\Users\\IBCIRCUIT\\Desktop\\method\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\IBCIRCUIT\\AppData\\Roaming\\NuGet\\NuGet.Config"
