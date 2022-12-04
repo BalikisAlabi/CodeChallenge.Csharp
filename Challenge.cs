@@ -8,31 +8,27 @@ namespace method
     public class Challenge
     {
       public static void Main()
-        {
-          Console.WriteLine("Enter your text to get encoded");
-          //string text= encode(decode(Console.ReadLine())); 
+        { 
           string text = "AfricanJournal";
-          System.Console.WriteLine(encode(text));
-          string code = encode(text);
-          System.Console.WriteLine(decode(code));
+          System.Console.WriteLine(decode(text));
         }
-       static string encode(string text)
-      {     
-        Char[] first = text.Substring(0, text.Length/2).ToCharArray();
-        Char[] second = text.Substring(text.Length/2).ToCharArray();
+       static string decode(string text)
+        {
+          Char[] first = text.Substring(0, text.Length/2).ToCharArray();
+         Char[] second = text.Substring(text.Length/2).ToCharArray();
         string odd = "";
         string even = "";
 
-        for(int i = 0; i < first.Length; i++)
+        for(int i = 0; i < first.Length-1; i++)
         {
-           if (i % 2 ==0)
+           if (i % 2 == 0)
            {
              odd += first[i];
              odd +=second[i];
            }
         }
         odd += first[first.Length-1];
-        for(int i = 0; i < second.Length; i++)
+        for(int i = 0; i < second.Length-1; i++)
         {
           if (i % 2 != 0)
           {
@@ -40,36 +36,33 @@ namespace method
             even +=second[i];
           }         
         }
-        odd += second[second.Length-1];
-        return even + odd;
-      }
-      //even += second[second.Length-1];
-       static string decode(string text)
-        {
-          Char[] first = text.Substring(0, text.Length/2).ToCharArray();
-          Char[] second = text.Substring(text.Length/2).ToCharArray();       
-          string odd = "";
-          string even = "";    
-            for(int i = 0; i < first.Length-1; i++)
+        even += second[second.Length-1];
+        //return even + odd;
+        System.Console.WriteLine(even+odd);
+          Char[] first1 = odd.ToCharArray();  
+          Char[] second1 = even.ToCharArray();     
+          string odd1 = "";
+          string even1 = "";    
+            for(int i = 0; i < first1.Length-1; i++)
             { 
                 if (i % 2 == 0)
                 {
-                    odd += first[i];
-                    odd +=second[i];   
+                    odd1 += first1[i];
+                    odd1 +=second1[i];   
                 }
             }
-            odd += first[first.Length-1];
+            odd1 += first1[first1.Length-1];
 
-            for(int i = 0; i < second.Length-1; i++)
+            for(int i = 0; i < second1.Length-1; i++)
             {  
-                if ( i % 2! == 0)
+                if ( i % 2 != 0)
                 {
-                    even += first[i];
-                    even +=second[i];   
+                    even1 += first1[i];
+                    even1 +=second1[i];   
                 }
             }
-            even += second[second.Length-1];
-        return odd + even;      
+            even1 += second1[second1.Length-1];
+        return odd1 + even1;      
     }  
 
     }
